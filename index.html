@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salon Beuty — Tu look, nuestra pasión</title>
+  <meta name="description" content="Salon Beuty en Temuco. Cortes, color, barbería y más. Reserva por WhatsApp.">
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">Salon Beuty</div>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto" class="btn btn-sm">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Potenciamos tu estilo</h1>
+        <p>Especialistas decoloración, cortes, alizados y más en Temuco. Agenda por WhatsApp o visítanos.</p>
+        <div class="actions">
+          <a href="#" id="cta-whatsapp" class="btn">Reservar por WhatsApp</a>
+          <a href="#ubicacion" class="btn btn-outline">Ver ubicación</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Corte Dama</h3>
+            <p>Diagnóstico y estilizado incluido.</p>
+          </article>
+          <article class="card">
+            <h3>Corte Caballero</h3>
+            <p>Clásico o moderno, como tú quieras.</p>
+          </article>
+          <article class="card">
+            <h3>Color</h3>
+            <p>Balayage, tintura completa, reflejos.</p>
+          </article>
+          <article class="card">
+            <h3>servicios varones</h3>
+            <p>Cortes clasico, moderno.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section section-muted">
+      <div class="container">
+        <h2>Galería</h2>
+        <div class="gallery">
+          <img src="https://placehold.co/600x800?text=Peluqueria+1" alt="Trabajo 1">
+          <img src="https://placehold.co/600x600?text=Peluqueria+2" alt="Trabajo 2">
+          <img src="https://placehold.co/600x750?text=Peluqueria+3" alt="Trabajo 3">
+          <img src="https://placehold.co/600x700?text=Peluqueria+4" alt="Trabajo 4">
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="section">
+      <div class="container">
+        <h2>¿Dónde estamos?</h2>
+        <p>San Martin 02799, Temuco — <a id="maps-link" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+        <!-- Reemplaza este iframe por el que te da Google Maps (Compartir > Insertar mapa) -->
+        <div class="map-wrap">
+          <iframe
+            id="maps-iframe"
+            src="https://www.google.com/maps?q=PELUQUERIA%20NOMBRE%20CIUDAD&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <ul class="features">
+          <li>🕒 Horario: ¡Agenda tu hora¡</li>
+          <li>📞 Tel: +56 9 5460 2746</li>
+          <li>📱 WhatsApp: +56 9 5460 2746</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="section section-muted">
+      <div class="container">
+        <h2>Reserva por WhatsApp</h2>
+        <form id="form-whatsapp" class="form">
+          <div class="field">
+            <label>Tu nombre</label>
+            <input type="text" id="nombre" placeholder="Ej: Camila" required>
+          </div>
+          <div class="field">
+            <label>Servicio</label>
+            <select id="servicio" required>
+              <option value="Corte dama">Corte dama</option>
+              <option value="Corte caballero">Corte caballero</option>
+              <option value="Color">Color</option>
+              <option value="Barbería">Barbería</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Mensaje (opcional)</label>
+            <textarea id="mensaje" rows="3" placeholder="¿Alguna preferencia o referencia?"></textarea>
+          </div>
+          <button class="btn" type="submit">Enviar a WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" id="whatsapp-float" class="wa-float" aria-label="Abrir WhatsApp" title="WhatsApp">
+    <!-- Ícono WhatsApp (SVG) -->
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+      <path d="M19.11 17.63c-.28-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.28-.7.88-.86 1.06-.16.18-.32.2-.6.07-.28-.14-1.16-.43-2.21-1.38-.82-.73-1.37-1.63-1.53-1.9-.16-.28-.02-.43.12-.57.12-.12.28-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.28-.96.93-.96 2.27s.99 2.64 1.12 2.82c.14.18 1.95 2.98 4.73 4.07.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.61-.66 1.84-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.31zM16 3c7.18 0 13 5.82 13 13 0 7.17-5.82 13-13 13-2.29 0-4.45-.6-6.3-1.66L3 29l1.78-6.58A12.93 12.93 0 0 1 3 16C3 8.82 8.82 3 16 3z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> Salon Beuty — Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
