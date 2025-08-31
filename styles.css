@@ -1,0 +1,84 @@
+:root {
+  --bg: #0f0f11;
+  --card: #16171a;
+  --muted: #0f1115;
+  --text: #e6e7ea;
+  --sub: #b7bac1;
+  --brand: #22c55e;
+  --brand-2: #16a34a;
+  --border: #23252a;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+/* Barra superior */
+.topbar { position: sticky; top: 0; background: rgba(15,15,17,0.7); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { font-weight: 700; }
+.nav a { color: var(--sub); margin-left: 16px; text-decoration: none; }
+.nav a:hover { color: var(--text); }
+.btn-sm { padding: 8px 12px; border: 1px solid var(--border); border-radius: 12px; }
+
+/* Hero */
+.hero { background: radial-gradient(1200px 600px at 10% -10%, #1c1f26 20%, transparent 50%), radial-gradient(1200px 600px at 90% -10%, #142016 20%, transparent 50%); }
+.hero-inner { padding: 72px 0 56px; text-align: center; }
+.hero h1 { font-size: clamp(30px, 4vw, 48px); margin-bottom: 8px; }
+.hero p { color: var(--sub); margin-bottom: 20px; }
+.actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* Secciones */
+.section { padding: 56px 0; }
+.section-muted { background: var(--muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+h2 { font-size: 28px; margin-bottom: 20px; }
+
+/* Servicios */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+.card h3 { margin-top: 0; }
+
+/* Galería */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.gallery img { width: 100%; border-radius: 12px; border: 1px solid var(--border); }
+
+/* Mapa */
+.map-wrap { aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.map-wrap iframe { width: 100%; height: 100%; border: 0; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+/* Formulario */
+.form { display: grid; gap: 12px; max-width: 520px; }
+.field label { font-size: 14px; color: var(--sub); }
+.field input, .field select, .field textarea { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: #0e0f12; color: var(--text); }
+
+/* Botones */
+.btn { padding: 12px 18px; background: var(--brand); color: #0a0a0a; border-radius: 14px; text-decoration: none; font-weight: 600; border: 1px solid var(--brand-2); }
+.btn:hover { filter: brightness(1.05); }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { border-color: var(--text); }
+
+/* Botón WhatsApp flotante */
+.wa-float { position: fixed; right: 20px; bottom: 20px; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #25D366; color: #0a0a0a; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.wa-float:active { transform: scale(.95); }
+
+/* Footer */
+.footer { border-top: 1px solid var(--border); padding: 20px 0; color: var(--sub); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .features { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .nav a { display: none; }
+  .nav .btn-sm { display: inline-block; }
+}
